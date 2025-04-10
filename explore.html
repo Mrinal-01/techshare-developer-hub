@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShare - Explore</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="assets/images/logo.svg" alt="TechShare Logo" class="logo-img">
+                    <h1 class="logo-text">TechShare</h1>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>My Feed</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="explore.html" class="nav-link">
+                            <i class="fas fa-compass"></i>
+                            <span>Explore</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="history.html" class="nav-link">
+                            <i class="fas fa-history"></i>
+                            <span>History</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="squads.html" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Squads</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bookmarks.html" class="nav-link">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-reputation">
+                    <div class="reputation-badge">
+                        <span class="badge-level">Lv 2</span>
+                    </div>
+                    <div class="reputation-info">
+                        <span class="reputation-score">230 Rep</span>
+                        <a href="profile.html" class="reputation-profile">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="sidebar-actions">
+                    <a href="settings.html" class="sidebar-action">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="#" class="sidebar-action" id="toggleTheme">
+                        <i class="fas fa-moon"></i>
+                        <span>Dark Mode</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search articles, tags, or authors..." class="search-input">
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="btn btn-primary create-post-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>Create Post</span>
+                    </button>
+                    
+                    <div class="notifications-dropdown">
+                        <button class="notifications-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <div class="dropdown-content notifications-content">
+                            <div class="dropdown-header">
+                                <h3>Notifications</h3>
+                                <a href="notifications.html">View All</a>
+                            </div>
+                            <div class="notification-list">
+                                <!-- Notifications will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <img src="assets/images/avatar.jpg" alt="User Avatar" class="user-avatar">
+                        </button>
+                        <div class="dropdown-content user-content">
+                            <div class="dropdown-user-info">
+                                <img src="assets/images/avatar.jpg" alt="User Avatar" class="dropdown-user-avatar">
+                                <div class="dropdown-user-details">
+                                    <h4>Alex Johnson</h4>
+                                    <p>alex.johnson@company.com</p>
+                                </div>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a href="upgrade.html"><i class="fas fa-crown"></i> Upgrade to Plus</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Explore Content -->
+            <div class="explore-container">
+                <div class="explore-header">
+                    <h1>Explore Content</h1>
+                    <p>Discover new topics, authors, and trends in the tech community</p>
+                </div>
+                
+                <div class="explore-sections">
+                    <div class="explore-section">
+                        <div class="section-header">
+                            <h2>Popular Topics</h2>
+                            <a href="#" class="section-link">View All</a>
+                        </div>
+                        
+                        <div class="topic-grid">
+                            <div class="topic-card">
+                                <div class="topic-icon" style="background-color: #E5DEFF">
+                                    <i class="fab fa-js" style="color: #F7DF1E"></i>
+                                </div>
+                                <h3>JavaScript</h3>
+                                <p>1,250 posts</p>
+                                <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                            
+                            <div class="topic-card">
+                                <div class="topic-icon" style="background-color: #E5F6FF">
+                                    <i class="fab fa-react" style="color: #61DAFB"></i>
+                                </div>
+                                <h3>React</h3>
+                                <p>876 posts</p>
+                                <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                            
+                            <div class="topic-card">
+                                <div class="topic-icon" style="background-color: #F2FCE2">
+                                    <i class="fab fa-node-js" style="color: #43853D"></i>
+                                </div>
+                                <h3>Node.js</h3>
+                                <p>724 posts</p>
+                                <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                            
+                            <div class="topic-card">
+                                <div class="topic-icon" style="background-color: #FEF7CD">
+                                    <i class="fab fa-python" style="color: #3776AB"></i>
+                                </div>
+                                <h3>Python</h3>
+                                <p>697 posts</p>
+                                <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="explore-section">
+                        <div class="section-header">
+                            <h2>Trending This Week</h2>
+                            <a href="#" class="section-link">View All</a>
+                        </div>
+                        
+                        <div class="trending-posts">
+                            <div class="trending-post">
+                                <div class="trending-number">01</div>
+                                <div class="trending-content">
+                                    <h3>The Future of Web Development: What to Expect in 2025</h3>
+                                    <div class="trending-meta">
+                                        <img src="assets/images/author1.jpg" alt="Author" class="trending-author-img">
+                                        <span class="trending-author">Sarah Chen</span>
+                                        <span class="trending-date">2 days ago</span>
+                                        <span class="trending-views"><i class="fas fa-eye"></i> 8.4k</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="trending-post">
+                                <div class="trending-number">02</div>
+                                <div class="trending-content">
+                                    <h3>Building Scalable Microservices with Kubernetes and Docker</h3>
+                                    <div class="trending-meta">
+                                        <img src="assets/images/author2.jpg" alt="Author" class="trending-author-img">
+                                        <span class="trending-author">Michael Rodriguez</span>
+                                        <span class="trending-date">3 days ago</span>
+                                        <span class="trending-views"><i class="fas fa-eye"></i> 7.2k</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="trending-post">
+                                <div class="trending-number">03</div>
+                                <div class="trending-content">
+                                    <h3>10 AI Tools Every Developer Should Know About</h3>
+                                    <div class="trending-meta">
+                                        <img src="assets/images/author3.jpg" alt="Author" class="trending-author-img">
+                                        <span class="trending-author">Jessica Kim</span>
+                                        <span class="trending-date">4 days ago</span>
+                                        <span class="trending-views"><i class="fas fa-eye"></i> 6.9k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="explore-section">
+                        <div class="section-header">
+                            <h2>Top Authors to Follow</h2>
+                            <a href="#" class="section-link">View All</a>
+                        </div>
+                        
+                        <div class="authors-grid">
+                            <div class="author-card">
+                                <div class="author-card-header">
+                                    <img src="assets/images/author1.jpg" alt="Author" class="author-card-img">
+                                    <button class="btn btn-outline btn-sm follow-btn">Follow</button>
+                                </div>
+                                <div class="author-card-body">
+                                    <h3>Sarah Chen</h3>
+                                    <p class="author-role">Frontend Developer</p>
+                                    <div class="author-stats">
+                                        <div class="stat">
+                                            <span class="stat-value">85</span>
+                                            <span class="stat-label">Posts</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-value">12.4k</span>
+                                            <span class="stat-label">Followers</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-topics">
+                                        <span class="author-topic">React</span>
+                                        <span class="author-topic">JavaScript</span>
+                                        <span class="author-topic">CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="author-card">
+                                <div class="author-card-header">
+                                    <img src="assets/images/author2.jpg" alt="Author" class="author-card-img">
+                                    <button class="btn btn-outline btn-sm follow-btn">Follow</button>
+                                </div>
+                                <div class="author-card-body">
+                                    <h3>Michael Rodriguez</h3>
+                                    <p class="author-role">DevOps Engineer</p>
+                                    <div class="author-stats">
+                                        <div class="stat">
+                                            <span class="stat-value">67</span>
+                                            <span class="stat-label">Posts</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-value">9.7k</span>
+                                            <span class="stat-label">Followers</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-topics">
+                                        <span class="author-topic">DevOps</span>
+                                        <span class="author-topic">Docker</span>
+                                        <span class="author-topic">AWS</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="author-card">
+                                <div class="author-card-header">
+                                    <img src="assets/images/author3.jpg" alt="Author" class="author-card-img">
+                                    <button class="btn btn-outline btn-sm follow-btn">Follow</button>
+                                </div>
+                                <div class="author-card-body">
+                                    <h3>Jessica Kim</h3>
+                                    <p class="author-role">Data Scientist</p>
+                                    <div class="author-stats">
+                                        <div class="stat">
+                                            <span class="stat-value">42</span>
+                                            <span class="stat-label">Posts</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-value">8.3k</span>
+                                            <span class="stat-label">Followers</span>
+                                        </div>
+                                    </div>
+                                    <div class="author-topics">
+                                        <span class="author-topic">Machine Learning</span>
+                                        <span class="author-topic">Python</span>
+                                        <span class="author-topic">Data Viz</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="createPostModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Post</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="postForm">
+                    <div class="form-group">
+                        <label for="postTitle">Title</label>
+                        <input type="text" id="postTitle" placeholder="Enter a descriptive title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postContent">Content</label>
+                        <div class="editor-toolbar">
+                            <button type="button" class="toolbar-btn" data-action="bold"><i class="fas fa-bold"></i></button>
+                            <button type="button" class="toolbar-btn" data-action="italic"><i class="fas fa-italic"></i></button>
+                            <button type="button" class="toolbar-btn" data-action="link"><i class="fas fa-link"></i></button>
+                            <button type="button" class="toolbar-btn" data-action="code"><i class="fas fa-code"></i></button>
+                            <button type="button" class="toolbar-btn" data-action="image"><i class="fas fa-image"></i></button>
+                        </div>
+                        <textarea id="postContent" rows="10" placeholder="Write your post content here..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postTags">Tags</label>
+                        <input type="text" id="postTags" placeholder="Add tags separated by commas (e.g., javascript, webdev)">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-text" id="saveDraft">Save as Draft</button>
+                        <button type="submit" class="btn btn-primary">Publish Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-actions">
+                <button class="btn btn-text" id="customizeCookies">Customize</button>
+                <button class="btn btn-primary" id="acceptCookies">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/api/api.js"></script>
+    <script src="js/components/notifications.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/explore.js"></script>
+</body>
+</html>

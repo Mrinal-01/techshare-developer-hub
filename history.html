@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShare - History</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="assets/images/logo.svg" alt="TechShare Logo" class="logo-img">
+                    <h1 class="logo-text">TechShare</h1>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>My Feed</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="explore.html" class="nav-link">
+                            <i class="fas fa-compass"></i>
+                            <span>Explore</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="history.html" class="nav-link">
+                            <i class="fas fa-history"></i>
+                            <span>History</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="squads.html" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <span>Squads</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="bookmarks.html" class="nav-link">
+                            <i class="fas fa-bookmark"></i>
+                            <span>Bookmarks</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-reputation">
+                    <div class="reputation-badge">
+                        <span class="badge-level">Lv 2</span>
+                    </div>
+                    <div class="reputation-info">
+                        <span class="reputation-score">230 Rep</span>
+                        <a href="profile.html" class="reputation-profile">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="sidebar-actions">
+                    <a href="settings.html" class="sidebar-action">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="#" class="sidebar-action" id="toggleTheme">
+                        <i class="fas fa-moon"></i>
+                        <span>Dark Mode</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search history..." class="search-input">
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="btn btn-primary create-post-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>Create Post</span>
+                    </button>
+                    
+                    <div class="notifications-dropdown">
+                        <button class="notifications-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <div class="dropdown-content notifications-content">
+                            <div class="dropdown-header">
+                                <h3>Notifications</h3>
+                                <a href="notifications.html">View All</a>
+                            </div>
+                            <div class="notification-list">
+                                <!-- Notifications will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <img src="assets/images/avatar.jpg" alt="User Avatar" class="user-avatar">
+                        </button>
+                        <div class="dropdown-content user-content">
+                            <div class="dropdown-user-info">
+                                <img src="assets/images/avatar.jpg" alt="User Avatar" class="dropdown-user-avatar">
+                                <div class="dropdown-user-details">
+                                    <h4>Alex Johnson</h4>
+                                    <p>alex.johnson@company.com</p>
+                                </div>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a href="upgrade.html"><i class="fas fa-crown"></i> Upgrade to Plus</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- History Content -->
+            <div class="history-container">
+                <div class="history-header">
+                    <h1>Browsing History</h1>
+                    <div class="history-actions">
+                        <button class="btn btn-outline btn-sm clear-history-btn">
+                            <i class="fas fa-trash"></i>
+                            <span>Clear History</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="history-filters">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All</button>
+                        <button class="filter-tab" data-filter="today">Today</button>
+                        <button class="filter-tab" data-filter="yesterday">Yesterday</button>
+                        <button class="filter-tab" data-filter="week">This Week</button>
+                        <button class="filter-tab" data-filter="month">This Month</button>
+                    </div>
+                </div>
+                
+                <div class="history-timeline">
+                    <div class="timeline-date">
+                        <h3>Today</h3>
+                    </div>
+                    
+                    <div class="history-items">
+                        <div class="history-item">
+                            <div class="history-time">10:45 AM</div>
+                            <div class="history-content">
+                                <h4>Getting Started with React 18: New Features and Improvements</h4>
+                                <div class="history-meta">
+                                    <span class="history-author">Sarah Chen</span>
+                                    <span class="history-topic">React</span>
+                                </div>
+                            </div>
+                            <div class="history-actions">
+                                <button class="history-action" title="View Post">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="history-action" title="Remove from History">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="history-item">
+                            <div class="history-time">9:20 AM</div>
+                            <div class="history-content">
+                                <h4>Optimizing CI/CD Pipelines for Large Scale Projects</h4>
+                                <div class="history-meta">
+                                    <span class="history-author">Michael Rodriguez</span>
+                                    <span class="history-topic">DevOps</span>
+                                </div>
+                            </div>
+                            <div class="history-actions">
+                                <button class="history-action" title="View Post">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="history-action" title="Remove from History">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-date">
+                        <h3>Yesterday</h3>
+                    </div>
+                    
+                    <div class="history-items">
+                        <div class="history-item">
+                            <div class="history-time">4:30 PM</div>
+                            <div class="history-content">
+                                <h4>Practical Applications of Machine Learning in Everyday Products</h4>
+                                <div class="history-meta">
+                                    <span class="history-author">Jessica Kim</span>
+                                    <span class="history-topic">Machine Learning</span>
+                                </div>
+                            </div>
+                            <div class="history-actions">
+                                <button class="history-action" title="View Post">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="history-action" title="Remove from History">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="history-item">
+                            <div class="history-time">2:15 PM</div>
+                            <div class="history-content">
+                                <h4>Building Accessible Web Applications: A Comprehensive Guide</h4>
+                                <div class="history-meta">
+                                    <span class="history-author">Alex Johnson</span>
+                                    <span class="history-topic">Accessibility</span>
+                                </div>
+                            </div>
+                            <div class="history-actions">
+                                <button class="history-action" title="View Post">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="history-action" title="Remove from History">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="createPostModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Post</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="postForm">
+                    <div class="form-group">
+                        <label for="postTitle">Title</label>
+                        <input type="text" id="postTitle" placeholder="Enter a descriptive title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postContent">Content</label>
+                        <div class="editor-toolbar">
+                            <button type="button" class="toolbar-btn" data-action="bold"><i class="fas fa-bold"></i></button>
+                            <button type="button" class="toolbar-btn" data-action="italic"><i class="fas fa-italic"></i></button>
+                            <button type="button" class="toolbar-btn" data-action="link"><i class="fas fa-link"></i></button>
+                            <button type="button" class="toolbar-btn" data-action="code"><i class="fas fa-code"></i></button>
+                            <button type="button" class="toolbar-btn" data-action="image"><i class="fas fa-image"></i></button>
+                        </div>
+                        <textarea id="postContent" rows="10" placeholder="Write your post content here..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="postTags">Tags</label>
+                        <input type="text" id="postTags" placeholder="Add tags separated by commas (e.g., javascript, webdev)">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-text" id="saveDraft">Save as Draft</button>
+                        <button type="submit" class="btn btn-primary">Publish Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-actions">
+                <button class="btn btn-text" id="customizeCookies">Customize</button>
+                <button class="btn btn-primary" id="acceptCookies">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/api/api.js"></script>
+    <script src="js/components/notifications.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/history.js"></script>
+</body>
+</html>
